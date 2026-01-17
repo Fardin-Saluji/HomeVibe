@@ -71,43 +71,31 @@ node app.js
 http://localhost:8080
 
 🧪 Functionalities Explained
-🔐 Authentication
 
-Users can sign up & log in
+🔐 Authentication:-
+Users can sign up & log in,
+Only logged-in users can add, edit, or delete listings.
 
-Only logged-in users can add, edit, or delete listings
+🏘 Listings:-
+Add property with image, price, location & description,
+Edit listing details,
+Delete listing.
 
-🏘 Listings
+⭐ Reviews & Ratings:-
+Users can give ratings (stars),
+Users can add comments/reviews.
 
-Add property with image, price, location & description
-
-Edit listing details
-
-Delete listing
-
-⭐ Reviews & Ratings
-
-Users can give ratings (stars)
-
-Users can add comments/reviews
-
-💰 GST Feature
-
+💰 GST Feature:-
 Displays price with 18% GST option
 
-📸 Screenshots
-
+📸 Screenshots:-
 Screenshots of Home Page, Listing Page, Review Section & Dashboard are added above ⬆️
 
-📌 Future Improvements
-
-Payment Gateway Integration
-
-Map Integration (Location)
-
-Booking System
-
-Image Upload using Cloudinary
+📌 Future Improvements:-
+Payment Gateway Integration,
+Map Integration (Location),
+Booking System,
+Image Upload using Cloudinary.
 
 🙋‍♂️ Author
 
