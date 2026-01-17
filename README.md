@@ -49,7 +49,7 @@ wanderlust/
 
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
-git clone https://github.com/your-username/wanderlust.git
+git clone https://github.com/Fardin-Saluji/HomeVibe.git
 
 2️⃣ Go to Project Folder
 cd wanderlust
