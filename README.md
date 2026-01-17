@@ -1,6 +1,6 @@
 🏠 Homevibe – Airbnb Clone
 
-A full-stack Airbnb Clone web application where users can explore listings, add new properties, give reviews, and manage listings with authentication.
+HomeVibe is a full-stack Airbnb clone web application that allows users to explore property listings, create and manage their own listings with images and details, edit or delete properties, and share reviews with star ratings. The application includes user authentication for secure access and features GST-based price calculation, providing a realistic booking-platform experience.
 
 🚀 Features
 
