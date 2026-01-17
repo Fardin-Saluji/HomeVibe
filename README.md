@@ -1,5 +1,4 @@
-🏠 WanderLust – Airbnb Clone
-
+🏠 Homevibe – Airbnb Clone
 A full-stack Airbnb Clone web application where users can explore listings, add new properties, give reviews, and manage listings with authentication.
 
 🚀 Features
