@@ -1,4 +1,5 @@
-🏠 Homevibe – Airbnb Clone:-
+🏠 Homevibe – Airbnb Clone
+
 A full-stack Airbnb Clone web application where users can explore listings, add new properties, give reviews, and manage listings with authentication.
 
 🚀 Features
@@ -18,22 +19,22 @@ A full-stack Airbnb Clone web application where users can explore listings, add 
 🛠️ Tech Stack
 
 Frontend:-
-HTML
-CSS
-Bootstrap
-EJS (Embedded JavaScript Templates)
+HTML,
+CSS,
+Bootstrap,
+EJS (Embedded JavaScript Templates).
 
 Backend:-
-Node.js
-Express.js
+Node.js,
+Express.js.
 
 Database:-
-MongoDB
-Mongoose
+MongoDB,
+Mongoose.
 
 Authentication & Security:-
-Passport.js
-Express Session
+Passport.js,
+Express Session.
 
 📂 Project Structure
 wanderlust/
