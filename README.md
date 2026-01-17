@@ -37,7 +37,7 @@ Passport.js,
 Express Session.
 
 📂 Project Structure
-wanderlust/
+homevibe/
 │
 ├── models/        # Mongoose Schemas
 ├── routes/        # Express Routes
