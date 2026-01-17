@@ -17,30 +17,22 @@ A full-stack Airbnb Clone web application where users can explore listings, add 
 
 🛠️ Tech Stack
 
-Frontend
-
+Frontend:-
 HTML
-
 CSS
-
 Bootstrap
-
 EJS (Embedded JavaScript Templates)
 
-Backend
-
+Backend:-
 Node.js
-
 Express.js
 
-Database
+Database:-
 MongoDB
 Mongoose
 
-Authentication & Security
-
+Authentication & Security:-
 Passport.js
-
 Express Session
 
 📂 Project Structure
