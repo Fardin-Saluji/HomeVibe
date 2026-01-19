@@ -2,8 +2,6 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
-console.log("Mapbox Token:", process.env.MAPBOX_TOKEN);
-
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -26,11 +24,8 @@ const userRouter = require("./routes/user.js");
 // -------------------- DATABASE --------------------
 const dbUrl = process.env.ATLASDB_URL;
 
-async function main() {
-  await mongoose.connect(dbUrl);
-}
-
-main()
+mongoose
+  .connect(dbUrl)
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch((err) => console.log("Mongo Error:", err));
 
@@ -53,15 +48,11 @@ const store = MongoStore.create({
   touchAfter: 24 * 3600,
 });
 
-store.on("error", (err) => {
-  console.log("❌ ERROR IN MONGO SESSION STORE", err);
-});
-
 const sessionOptions = {
   store,
   secret: process.env.SECRET,
   resave: false,
-  saveUninitialized: false, // ✅ BEST PRACTICE
+  saveUninitialized: false,
   cookie: {
     expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
     maxAge: 7 * 24 * 60 * 60 * 1000,
@@ -80,37 +71,28 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// -------------------- LOCALS --------------------
+// -------------------- GLOBAL LOCALS (VERY IMPORTANT) --------------------
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
   res.locals.currUser = req.user;
+  res.locals.mapToken = process.env.MAPBOX_TOKEN;
   next();
 });
-
-// app.get("/demouser", async (req, res) => {
-//   let fakeUser = new User({
-//     email: "student@gmail.com",
-//     username: "delta-student",
-//   });
-
-//   let registeredUser = await User.register(fakeUser, "helloworld");
-//   res.send(registeredUser);
-// });
 
 // -------------------- ROUTES --------------------
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
-// -------------------- 404 HANDLER --------------------
+// -------------------- 404 --------------------
 app.all("*", (req, res, next) => {
-  next(new ExpressError(404, "Page Not Found!"));
+  next(new ExpressError(404, "Page Not Found"));
 });
 
 // -------------------- ERROR HANDLER --------------------
 app.use((err, req, res, next) => {
-  const { statusCode = 500, message = "Something went wrong!" } = err;
+  const { statusCode = 500, message = "Something went wrong" } = err;
   res.status(statusCode).render("error.ejs", { message });
 });
 

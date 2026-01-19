@@ -119,9 +119,33 @@ body {
 }
 
 /* Map */
-#map {
+/* #map {
   width: 100%;
   height: 400px;
   margin-top: 20px;
+  border-radius: 10px;
+} */
+
+.search-btn {
+  background-color: #fe424d;
+  color: #fff;
+  border-radius: 25px;
+  padding: 0 1rem;
+}
+
+.search-btn:hover {
+  background-color: #fe424d;
+  color: #fff;
+}
+
+.search-inp {
+  border-radius: 25px;
+  padding: 0.5rem 3rem;
+  font-size: 1rem;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
   border-radius: 10px;
 }
