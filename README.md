@@ -52,7 +52,7 @@ homevibe/
 git clone https://github.com/Fardin-Saluji/HomeVibe.git
 
 2️⃣ Go to Project Folder
-cd wanderlust
+cd homevibe
 
 3️⃣ Install Dependencies
 npm install
